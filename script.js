@@ -21,8 +21,8 @@ $(".btns").animate({'opacity':1})
     
     //blink animation
     $('.'+randomChosenColor).fadeOut(100).fadeIn();
-    let audio=new Audio("audio/mixkit-arcade-game-jump-coin-216.wav")
-    audio.play()
+    audioplay("audio/mixkit-arcade-game-jump-coin-216.wav")
+   
    
     return(randomNumber);
 }
