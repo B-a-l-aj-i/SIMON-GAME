@@ -44,7 +44,7 @@ $(".btn").click((e)=>{
     
     
     if(gamePattern.length===userClickedPattern.length){
-        console.log("up  "+userClickedPattern);
+        console.log("up   "+userClickedPattern);
 
         // for(i=0;i<gamePattern.length;i++){
             if(gamePattern.join("")===userClickedPattern.join("")){
