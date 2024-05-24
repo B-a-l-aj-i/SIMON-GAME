@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(41, 41, 74);
+    color: #ffff;
+    font-family: cursive;
+    font-size:1.9rem;
+}
+
+.head{
+    text-align: center;
+}
+.btns{
+    color:rgb(41, 41, 74);
+    display:grid;
+    grid-template-columns: 190px 200px;
+    gap:2%;
+    align-items: center;
+    justify-content:center;
+    margin-top:10%;
+}
+.btn{
+    cursor: pointer;
+    border: 6px solid black;
+    border-radius: 50px;
+    width: 200px;
+    height: 200px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
