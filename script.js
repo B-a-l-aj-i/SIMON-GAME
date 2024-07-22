@@ -20,7 +20,7 @@ $(".btns").animate({'opacity':1})
     console.log("gp "+gamePattern);
     
     //blink animation
-    $('.'+randomChosenColor).fadeOut(100).fadeIn();
+    $('.'+randomChosenColor).fadeOut().fadeIn();
     audioplay("audio/mixkit-arcade-game-jump-coin-216.wav")
    
    
@@ -29,7 +29,7 @@ $(".btns").animate({'opacity':1})
 $(document).keypress(()=>{
     if(started===0){
         nextSequence()
-        started++
+        started++;
     }
 })
 
@@ -51,18 +51,21 @@ $(".btn").click((e)=>{
                 // console.log(gamePattern[i],userClickedPattern[i]);
                 userClickedPattern=[]
                 console.log("correct");
+                $('#score').text(`score:${level}`)
                 let audio=new Audio("audio/90s-game-ui-6-185099.mp3");
                audio.play()
                 nextSequence()
                 // break
             }else {
                 console.log("wrong");
-                  $('#title').text('press S key to start')
-                  $(".btns").animate({'opacity':0.2})
-                  $('body').css('background-color','red')
-                  audioplay("audio/mixkit-losing-drums-2023.wav")
-                  gamePattern=[]
-
+                $('#title').text(`press S key to start Again`)
+                $('#score').text(`score:${level-1}`)
+                $(".btns").animate({'opacity':0.2})
+                $('body').css('background-color','red')
+                audioplay("audio/mixkit-losing-drums-2023.wav")
+                gamePattern=[]
+                
+        
                  $(".btn").keypress(()=>{
                     startAgain()
                  })
@@ -74,8 +77,8 @@ $(".btn").click((e)=>{
 function startAgain(){
     level=0;
     started=0;
-    gamePattern=[]
-    userClickedPattern=[]
+    gamePattern=[];
+    userClickedPattern=[];
 
 
     $('body').css('background-color',' rgb(41, 41, 74)')
