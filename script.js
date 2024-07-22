@@ -36,6 +36,7 @@ $(document).keypress(()=>{
 
 $(".btn").click((e)=>{
     // console.log(e.target.classList[1]);
+    // 
     $("."+e.target.classList[1]).fadeOut(10).fadeIn(10);
     userClickedPattern.push(e.target.classList[1])
     
